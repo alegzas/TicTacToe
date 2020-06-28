@@ -30,6 +30,11 @@ while not crashed:
     #loop
         if event.type == pygame.QUIT:
             crashed = True
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_r:
+                gameDisplay.fill([220,220,220])
+                grid = [[0,0,0], [0,0,0], [0,0,0]]
+                currentPlayer = 1
         if event.type == pygame.MOUSEBUTTONUP:
             if grid[0][0] == 0 and mouseX > 0 and mouseX < width/3  and mouseY > 0 and mouseY < heigth/3:
                 grid[0][0] = currentPlayer
