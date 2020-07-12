@@ -38,31 +38,23 @@ while not crashed:
         if event.type == pygame.MOUSEBUTTONUP:
             if grid[0][0] == 0 and mouseX > 0 and mouseX < width/3  and mouseY > 0 and mouseY < heigth/3:
                 grid[0][0] = currentPlayer
-                currentPlayer *= -1
             elif grid[0][1] == 0 and mouseX > width/3 and mouseX < width/1.5 and mouseY > 0 and mouseY < heigth/3:
                 grid[0][1] = currentPlayer
-                currentPlayer *= -1
             elif grid[0][2] == 0 and mouseX > width/1.5 and mouseX < width and mouseY > 0 and mouseY < heigth/3:
                 grid[0][2] = currentPlayer
-                currentPlayer *= -1
             elif grid[1][0] == 0 and mouseX > 0 and mouseX < width/3 and mouseY > heigth/3 and mouseY < heigth/1.5:
                 grid[1][0] = currentPlayer
-                currentPlayer *= -1
             elif grid[1][1] == 0 and mouseX > width/3 and mouseX < width/1.5 and mouseY > heigth/3 and mouseY < heigth/1.5:
                 grid[1][1] = currentPlayer
-                currentPlayer *= -1
             elif grid[1][2] == 0 and mouseX > width/1.5 and mouseX < width and mouseY > heigth/3 and mouseY < heigth/1.5:
                 grid[1][2] = currentPlayer
-                currentPlayer *= -1
             elif grid[2][0] == 0 and mouseX > 0 and mouseX < width/3 and mouseY > heigth/1.5 and mouseY < heigth:
                 grid[2][0] = currentPlayer
-                currentPlayer *= -1
             elif grid[2][1] == 0 and mouseX > width/3 and mouseX < width/1.5 and mouseY > heigth/1.5 and mouseY < heigth:
                 grid[2][1] = currentPlayer
-                currentPlayer *= -1
             elif grid [2][2] == 0 and mouseX > width/1.5 and mouseX < width and mouseY > heigth/1.5 and mouseY < heigth:
                 grid[2][2] = currentPlayer
-                currentPlayer *= -1
+            currentPlayer *= -1
         #print(event)
     #endloop
     for i in range(len(grid)):
@@ -80,6 +72,5 @@ while not crashed:
     pygame.display.update()
     clock.tick(60)
 #endloop
-
 
 #pygame.draw.circle(gameDisplay, (0, 0, 0), (100, 100), 80, 5)
