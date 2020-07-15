@@ -20,14 +20,10 @@ crashed = False
 currentPlayer = 1;
 
 while not crashed:
-#loop
-
 
     mouseX, mouseY = pygame.mouse.get_pos()
 
-
     for event in pygame.event.get():
-    #loop
         if event.type == pygame.QUIT:
             crashed = True
         if event.type == pygame.KEYUP:
@@ -55,8 +51,7 @@ while not crashed:
             elif grid [2][2] == 0 and mouseX > width/1.5 and mouseX < width and mouseY > heigth/1.5 and mouseY < heigth:
                 grid[2][2] = currentPlayer
             currentPlayer *= -1
-        #print(event)
-    #endloop
+
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if grid[i][j] == -1:
@@ -71,6 +66,3 @@ while not crashed:
     pygame.draw.line(gameDisplay, (0, 0, 0), (0, heigth/1.5), (width, heigth/1.5), 10)
     pygame.display.update()
     clock.tick(60)
-#endloop
-
-#pygame.draw.circle(gameDisplay, (0, 0, 0), (100, 100), 80, 5)
